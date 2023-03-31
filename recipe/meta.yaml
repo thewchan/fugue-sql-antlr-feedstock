@@ -12,17 +12,17 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.6
   run:
-    - antlr4-python3-runtime >=4.10
+    - antlr4-python3-runtime >=4.11.1,<4.12
     - jinja2
     - python >=3.6
-    - triad
+    - triad >=0.6.8
 
 test:
   imports:
